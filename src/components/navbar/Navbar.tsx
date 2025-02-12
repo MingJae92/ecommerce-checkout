@@ -3,7 +3,7 @@ import navbarStyles from "../../styles/navbarstyles/navbar.styles";
 
 const Navbar = () => {
   return (
-    <AppBar position="static" sx={navbarStyles.appBar}>
+    <AppBar position="fixed" sx={navbarStyles.appBar}>
       <Toolbar sx={navbarStyles.toolbar}>
         {/* Store Name */}
         <Typography variant="h6" sx={navbarStyles.title}>
@@ -11,9 +11,11 @@ const Navbar = () => {
         </Typography>
 
         {/* Navigation Buttons */}
-        <Button color="inherit" sx={navbarStyles.button}>Home</Button>
-        <Button color="inherit" sx={navbarStyles.button}>Products</Button>
-        <Button color="inherit" sx={navbarStyles.button}>Contact</Button>
+        <Box sx={navbarStyles.navLinks}>
+          <Button color="inherit" sx={navbarStyles.button}>Home</Button>
+          <Button color="inherit" sx={navbarStyles.button}>Products</Button>
+          <Button color="inherit" sx={navbarStyles.button}>Contact</Button>
+        </Box>
 
         {/* Basket & Login */}
         <Box sx={navbarStyles.rightSection}>
