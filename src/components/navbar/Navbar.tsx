@@ -1,4 +1,5 @@
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { Link } from "react-router-dom";
 import navbarStyles from "../../styles/navbarstyles/navbar.styles";
 
 const Navbar = () => {
@@ -12,16 +13,35 @@ const Navbar = () => {
 
         {/* Navigation Buttons */}
         <Box sx={navbarStyles.navLinks}>
-          <Button color="inherit" sx={navbarStyles.button}>Home</Button>
-          <Button color="inherit" sx={navbarStyles.button}>Products</Button>
-          <Button color="inherit" sx={navbarStyles.button}>Contact</Button>
+          <Link to="/">
+            <Button color="inherit" sx={navbarStyles.button}>
+              Home
+            </Button>
+          </Link>
+          <Link to="/products">
+            <Button color="inherit" sx={navbarStyles.button}>
+              Product
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button color="inherit" sx={navbarStyles.button}>
+              Basket
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button color="inherit" sx={navbarStyles.button}>
+              Checkout
+            </Button>
+          </Link>
+          <Link to="/">
+            <Button color="inherit" sx={navbarStyles.button}>
+              Login
+            </Button>
+          </Link>
         </Box>
 
         {/* Basket & Login */}
-        <Box sx={navbarStyles.rightSection}>
-          <Typography variant="body1" sx={navbarStyles.text}>Basket</Typography>
-          <Typography variant="body1" sx={navbarStyles.text}>Login</Typography>
-        </Box>
+       
       </Toolbar>
     </AppBar>
   );
