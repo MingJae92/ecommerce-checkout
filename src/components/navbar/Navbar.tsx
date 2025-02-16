@@ -18,11 +18,7 @@ const Navbar = () => {
               Home
             </Button>
           </Link>
-          <Link to="/products">
-            <Button color="inherit" sx={navbarStyles.button}>
-              Product
-            </Button>
-          </Link>
+          
           <Link to="/">
             <Button color="inherit" sx={navbarStyles.button}>
               Basket
