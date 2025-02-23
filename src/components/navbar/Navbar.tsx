@@ -19,17 +19,17 @@ const Navbar = () => {
             </Button>
           </Link>
           
-          <Link to="/">
+          <Link to="/basket">
             <Button color="inherit" sx={navbarStyles.button}>
               Basket
             </Button>
           </Link>
-          <Link to="/">
+          <Link to="/checkout">
             <Button color="inherit" sx={navbarStyles.button}>
               Checkout
             </Button>
           </Link>
-          <Link to="/">
+          <Link to="/login">
             <Button color="inherit" sx={navbarStyles.button}>
               Login
             </Button>
