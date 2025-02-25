@@ -15,6 +15,7 @@ function Homepage() {
         const response = await axios.get<ProductData[]>(
           "https://api.escuelajs.co/api/v1/products"
         );
+        console.log(response.data)
         setProducts(response.data);
         setLoading(false);
       } catch (err) {
@@ -40,20 +41,31 @@ function Homepage() {
       <Navbar />
       <h1>Homepage</h1>
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            <h2>{product.title}</h2>
-            <Typography>Basket</Typography>
-            <button>
-              Add
-            </button>
-            <button>
-              Remove
-            </button>
-            <img src={product.images} alt={product.title} width="200" />
-          </li>
-        ))}
-      </ul>
+  {products.map((product) => (
+    <li key={product.id}>
+      <h2>{product.title}</h2>
+      <Typography>Basket</Typography>
+      <button>Add</button>
+      <button>Remove</button>
+
+      {/* Display all product images */}
+      <h3>Product Images:</h3>
+      {product.images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt={`Product ${product.id} - ${index}`}
+          width="150"
+        />
+        
+      ))}
+
+      
+    </li>
+  ))}
+</ul>
+
+
     </div>
   );
 }

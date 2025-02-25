@@ -1,3 +1,8 @@
-export default  interface ShoppingCart {
-    
+
+
+export default interface BasketState {
+    cart:[]
 }
+
+
+
